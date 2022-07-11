@@ -23,8 +23,9 @@ return new class extends Migration
             $table->integer('Edad');
             $table->string('Enfermedades');
             $table->string('Foto');
-
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
+            
         });
     }
 
